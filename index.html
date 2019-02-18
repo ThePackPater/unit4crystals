@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Crystals CASH Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet">
+  <script type="text/javascript" src="myJS.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <style>
+    body {
+      min-height: 100vh;
+      background: url("images/rvback.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      font-family: 'Hanalei Fill', cursive;
+    }
+
+    .crystalimg {
+      width: 150px;
+      margin: 30px auto;
+    }
+
+    .jumbotron {
+      background: url("images/bbcrystal.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      color: antiquewhite;
+    }
+
+    .card {
+
+      background: url("images/bbcrystal.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      color: antiquewhite;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="jumbotron text-center">
+
+    <h1 class="display-4">CRYSTAL CASH COLLECTOR</h1>
+
+    <p class="lead">Heisenburg needs a new protege. First a little math quiz! Each tile reprents a hidden number click
+      the
+      tiles until your guess equals the sum of the magic number! </p>
+
+    <hr class="my-4">
+
+    <a class="btn btn-danger btn-lg" href="crystal.html" role="button">PLAY AGAIN</a>
+
+    <br>
+
+    <div class="card-group">
+
+      <div class="card">
+
+        <div class="card-body">
+
+          <h3>MAGIC NUMBER:</h3>
+
+          <h3 id="magicNumber"></h3>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-body">
+
+          <h3>TOTAL SCORE:</h3>
+
+          <h3 id="totalScore"></h3>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-body">
+
+          <h3 class="score">WINS: <span id="wins"></span></h3>
+
+          <h3 class="score">LOSSES: <span id="losses"></span></h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+
+        <img class="crystalimg img-responsive" id="crystal1" src="images/wwrv.gif" />
+
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+
+        <img class="crystalimg img-responsive" id="crystal2" src="images/wwcrystal.gif" />
+
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+
+        <img class="crystalimg img-responsive" id="crystal3" src="images/wwdogs.gif" />
+
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+
+        <img class="crystalimg img-responsive" id="crystal4" src="images/wwrainbow.gif" />
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+</body>
+
+</html>
