@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	function youWin() {
 
-		$("#winOrLose").text("YOU WIN!");
+		$("#winOrLose").text("YOU WIN, BECASUE I LET YOU!");
 
 		wins++;
 
