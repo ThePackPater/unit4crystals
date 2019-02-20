@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 		wins++;
 
-		if (wins === 5) {
+		if (wins === 3) {
 
 			location.replace("congrats.html");
 
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
 		losses++;
 
-		if (losses === 5) {
+		if (losses === 3) {
 
 			location.replace("gameover.html");
 
