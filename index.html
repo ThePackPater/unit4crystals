@@ -19,11 +19,12 @@
       background-repeat: no-repeat;
       background-attachment: scroll;
       font-family: 'Hanalei Fill', cursive;
+      text-shadow: crimson;
     }
 
     .crystalimg {
       width: 150px;
-      margin: 30px auto;
+      margin: 15px auto;
     }
 
     .jumbotron {
@@ -31,16 +32,22 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: scroll;
-      color:black;
+      color: black;
     }
 
     .card {
 
-      background:none;
+      background:transparent;
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: scroll;
-      
+
+    }
+
+    .imgbox {
+
+      background: url("images/bbcrystal.jpg");
+
     }
   </style>
 
@@ -54,7 +61,13 @@
 
     <br>
 
-    <a class="btn btn-danger btn-lg" href="" role="button">PLAY AGAIN</a>
+    <br>
+
+    <button type="button" id="btn" class="btn-danger btn-lg">PLAY AGAIN</button>
+
+    <br>
+
+    <hr class="my-4">
 
     <br>
 
@@ -62,25 +75,25 @@
 
       <div class="row">
 
-        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+        <div class="imgbox col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
 
           <img class="crystalimg img-responsive" id="crystal1" src="images/wwrv.gif" />
 
         </div>
 
-        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+        <div class="imgbox col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
 
           <img class="crystalimg img-responsive" id="crystal2" src="images/wwcrystal.gif" />
 
         </div>
 
-        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+        <div class="imgbox col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
 
           <img class="crystalimg img-responsive" id="crystal3" src="images/wwdogs.gif" />
 
         </div>
 
-        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+        <div class="imgbox col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
 
           <img class="crystalimg img-responsive" id="crystal4" src="images/wwrainbow.gif" />
 
@@ -88,8 +101,13 @@
 
       </div>
 
-      <p class="lead">Heisenburg needs a new protege. First a little math quiz! Each tile reprents a hidden number. Click
-        the tiles until your guess equals the sum of the magic number! Let's try not to dissapoint the one who knocks! </p>
+      <br>
+
+      <br>
+
+      <h2 >Heisenburg needs a new protege. First a little math quiz! Each tile reprents a hidden number.
+        Click the tiles until your score equals the sum of the target number! Let's try not to dissapoint the one who knocks!
+      </h2>
 
       <hr class="my-4">
 
@@ -101,9 +119,9 @@
 
         <div class="card-body">
 
-          <h3>MAGIC NUMBER:</h3>
+          <h3>TARGET NUMBER:</h3>
 
-          <h3 id="magicNumber"></h3>
+          <h3 id="targetNumber"></h3>
 
         </div>
 
@@ -113,7 +131,7 @@
 
         <div class="card-body">
 
-          <h3>TOTAL SCORE:</h3>
+          <h3>SCORE:</h3>
 
           <h3 id="totalScore"></h3>
 
@@ -137,11 +155,9 @@
 
     </div>
 
+    <hr class="my-4">
+
   </div>
-
-
-
-
 
 </body>
 

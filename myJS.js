@@ -1,10 +1,10 @@
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-	var magicNumber;
-	var totalScore = 0;
-	var wins = 0;
-	var losses = 0;
+	var targetNumber;
+	var totalScore = "";
+	var wins = "";
+	var losses = "";
 	var crystal1Num;
 	var crystal2Num;
 	var crystal3Num;
@@ -12,13 +12,16 @@ $(document).ready(function() {
 
 	function newNumbers() {
 
-		magicNumber = Math.floor(Math.random() * 110) + 20;
-		crystal1Num = Math.ceil(Math.random() * 12);
-		crystal2Num = Math.ceil(Math.random() * 12);
-		crystal3Num = Math.ceil(Math.random() * 12);
-		crystal4Num = Math.ceil(Math.random() * 12);
+		targetNumber = Math.floor(Math.random() * 110) + 13;
+		crystal1Num = Math.ceil(Math.random() * 13);
+		crystal2Num = Math.ceil(Math.random() * 13);
+		crystal3Num = Math.ceil(Math.random() * 13);
+		crystal4Num = Math.ceil(Math.random() * 13);
 
 	}
+
+
+
 
 	function newGame() {
 
@@ -26,7 +29,7 @@ $(document).ready(function() {
 
 		totalScore = 0;
 
-		$("#magicNumber").text(magicNumber);
+		$("#targetNumber").text(targetNumber);
 		$("#totalScore").text(totalScore);
 		$("#crystal1").attr("data-crystalvalue", crystal1Num);
 		$("#crystal2").attr("data-crystalvalue", crystal2Num);
@@ -36,47 +39,48 @@ $(document).ready(function() {
 		$("#losses").text(losses);
 		$("#winOrLose").text("");
 
-		console.log(crystal1Num, crystal2Num, crystal3Num, crystal4Num);
-
 	}
 
-	function youWin() {
+	function Win() {
 
-		$("#winOrLose").text("YOU WIN, BECASUE I LET YOU!");
+		$("#winOrLose").text("YOU WON, BECASUE I LET YOU WIN!");
 
 		wins++;
+
+		if (wins === 5) {
+
+			location.replace("congrats.html");
+
+		}
 
 		$("#wins").text(wins);
 
 	}
 
-	if (wins > 5) {
+	function lose() {
 
-		location.replace("congrats.html")
-	
-	}
-
-	function youLose() {
-
-		$("#winOrLose").text("YOU LOSE, DISSAPOINTING...");
+		$("#winOrLose").text("YOU LOST... DISSAPOINTING...");
 
 		losses++;
 
+		if (losses === 5) {
+
+			location.replace("gameover.html");
+
+		}
+
 		$("#losses").text(losses);
 
-  }
-  
-  if (losses > 5) {
-
-    location.replace("gameover.html")
-
-}
+	}
 
 	newGame();
 
-	$(".crystalimg").on("click", function() {
 
-		if (totalScore >= magicNumber) {
+	$(".crystalimg").on("click", function () {
+
+
+
+		if (totalScore >= targetNumber) {
 
 			return;
 
@@ -90,23 +94,27 @@ $(document).ready(function() {
 
 		$("#totalScore").text(totalScore);
 
-		if (totalScore === magicNumber) {
+		if (totalScore === targetNumber) {
 
-			youWin();
+			Win();
 
-		} else if (totalScore > magicNumber) {
+		} else if (totalScore > targetNumber) {
 
-			youLose();
+			lose();
 
 		}
 
 	});
 
 
-	$(".btn").on("click", function() {
+
+	$("#btn").on("click", function () {
 
 		newGame();
 
 	});
+
+
+
 
 });
